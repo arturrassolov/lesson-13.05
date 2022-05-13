@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    height: 300vh;
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .page-header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background-color: white;
+    box-shadow: 0 0 7px 1px lightgray;
+  }
+  .list {
+    text-align: center;
+  }
+  .list-item {
+    display: inline-block;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+  .list-link {
+    display: block;
+    padding: 1em 2em;
+    position: relative;
+    background-color: pink;
+    transition-property: background-color;
+    transition-duration: 700ms;
+    transition-timing-function: ease;
+    transition-delay: .4s;
+  }
+  .list-link:hover {
+    background-color: orange;
+  }
+  .list-link::after,
+  .list-link::before{
+    content: '';
+    display: block;
+    width: 0;
+    height: 5px;
+    position: absolute;
+    background-color: blue; 
+    transition-property: width;
+    transition-duration: 700ms;
+    transition-timing-function: ease;
+    transition-delay: .4s;
+  }
+  .list-link::after{
+    left:0;
+    bottom:-7px;
+  }
+  .list-link::before{
+    right:0;
+    top: -7px;
+  }
+  .list-link:hover::after,
+  .list-link:hover::before{
+    width: 100%;
+  }
+  
+  main {
+    padding-top: 6em;
+  }
+  h1 {
+    width: 200px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+  }
+  h1::before,
+  h1::after {
+    content: url(./../icons/flower-tulip.svg);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    /* background-color:aqua; */
+    color: white;
+  }
+  h1::before {
+    left: 0;
+  }
+  h1::after {
+    right: 0;
+  }
+  
+  p {
+    color: violet;
+    text-indent: 2em;
+  }
+  p::first-letter {
+    color: orange;
+    font-size: 2em;
+    text-shadow: -12px -11px 3px rgba(255, 150, 150, 0.66);
+    text-transform: uppercase;
+  }
+  p::first-line {
+    color: blue;
+    background-color: rgb(255, 219, 206);
+  }
+  ::selection {
+    color: darkviolet;
+    background-color: teal;
+  }
+  
+  .inner{
+    width: 10%;
+    height: 30px;
+    background-color: lime;
+    transition-property: width;
+    transition-duration: 1s;
+  }
